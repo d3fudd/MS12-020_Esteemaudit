@@ -52,7 +52,7 @@ Baixe o exploit e copie os arquivos:
 ```
 git clone https://github.com/caique-garbim/Esteemaudit-without-Metasploit
 cd Esteemaudit-without-Metasploit/
-cp esteemaudit/ /usr/share/
+cp -r esteemaudit/ /usr/share/
 cd /usr/share/esteemaudit
 ```
 
