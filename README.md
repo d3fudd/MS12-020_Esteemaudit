@@ -1,10 +1,14 @@
-# Esteemaudit without Metasploit
+# Esteemaudit without Metasploit - A Windows 2003 RDP Zero Day Exploit
 
 Explorando Remote Desktop do Windows Server 2003 com o exploit Esteemaudit (sem Metasploit) e obtendo RCE (Remote Code Execution).
 
 **REPOSITÓRIO CRIADO PARA FINS DIDÁTICOS!**
 
-Esta é uma portabilidade do Esteemaudit RDP Exploit vazado do Equationgroup (NSA). A vulnerabilidade explorada por este ataque está relacionada à autenticação de Smart Card, usada ao fazer logon no sistema por meio do serviço RDP. Os sistemas afetados são Windows Server 2003 SP1,SP2 e Windows XP SP0, SP1, SP3.
+Esta é uma portabilidade do Esteemaudit RDP Exploit vazado do Equationgroup (NSA). A vulnerabilidade explorada por este ataque está relacionada à autenticação de Smart Card, usada ao fazer logon no sistema por meio do serviço RDP. Os sistemas afetados são Windows Server 2003 SP1, SP2 e Windows XP SP0, SP1, SP3.
+
+O logon do Smart Card é suportado por todas as versões do Windows após o Windows 2000. Ele contém um chip que armazena as informações de logon do usuário, juntamente com a chave privada e a chave de certificado pública. Ao inseri-lo em um leitor de cartão inteligente conectado ao computador e digitar um número de identificação pessoal (PIN), o usuário pode fazer login com segurança no sistema Windows. Quando o logon ocorre por meio do serviço RDP, a máquina remota que executa o serviço RDP se comunica com o computador local, que se conecta ao leitor de cartão inteligente, solicita as informações no cartão inteligente e verifica o PIN.
+
+Esta vulnerabilidade está localizada na função "MyCPAcquireContext()" em "gpkcsp.dll", que é chamada por "winlogon.exe" na nova sessão do Windows. A função "MyCPAcquireContext()" é usada para configurar o contexto do Windows Cryptographic Service Providers (CSP). Ele lê os dados do Smart Card e define o valor dos campos da estrutura de contexto CSP. Se os dados lidos do cartão inteligente forem muito grandes, o buffer de campo usado pela estrutura de contexto CSP estoura e sobrescreve outro campo, permitindo a execução de código arbitrário.
 
 **Para realizar o teste foi utilizado o Kali Linux 2022.3 como máquina atacante e Windows Server 2003 (x86) como máquina alvo.**
 
