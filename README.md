@@ -2,6 +2,8 @@
 
 Explorando Remote Desktop do Windows Server 2003 com o exploit Esteemaudit (sem Metasploit) e obtendo RCE (Remote Code Execution).
 
+**REPOSITÓRIO CRIADO PARA FINS DIDÁTICOS!**
+
 Esta é uma portabilidade do Esteemaudit RDP Exploit vazado do Equationgroup (NSA). A vulnerabilidade explorada por este ataque está relacionada à autenticação de Smart Card, usada ao fazer logon no sistema por meio do serviço RDP. Os sistemas afetados são Windows Server 2003 SP1,SP2 e Windows XP SP0, SP1, SP3.
 
 **Para realizar o teste foi utilizado o Kali Linux 2022.3 como máquina atacante e Windows Server 2003 (x86) como máquina alvo.**
@@ -99,3 +101,6 @@ rdesktop 172.16.1.110 -u guest -p ''
 ```
 
 ![image](https://user-images.githubusercontent.com/76706456/186801609-9c57de87-1d2c-42b5-9a74-c7e44c0d178f.png)
+
+# Referência
+https://github.com/BlackMathIT/Esteemaudit-Metasploit
