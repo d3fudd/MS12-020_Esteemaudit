@@ -106,5 +106,18 @@ rdesktop 172.16.1.110 -u guest -p ''
 
 ![image](https://user-images.githubusercontent.com/76706456/186801609-9c57de87-1d2c-42b5-9a74-c7e44c0d178f.png)
 
-# Referência
+# Como mitigar
+
+1 - Execute gpedit.msc
+
+2 - Vá em Computer Configuration\Administrative Templates\Windows Components\Terminal Services\Client/Server data redirection\
+
+3 - Habilite "Do not allow Smart Card device redirection"
+
+4 - Reinicie o servidor
+
+# Referências
+
 https://github.com/BlackMathIT/Esteemaudit-Metasploit
+
+https://www.fortinet.com/blog/threat-research/deep-analysis-of-esteemaudit
