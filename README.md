@@ -121,3 +121,6 @@ rdesktop 172.16.1.110 -u guest -p ''
 https://github.com/BlackMathIT/Esteemaudit-Metasploit
 
 https://www.fortinet.com/blog/threat-research/deep-analysis-of-esteemaudit
+
+#
+Tags: CVE-2012-0002, MS12-020, Remote Desktop, Remote Code Execution, Vulnerability, RCE, RDP, Exploit, Exploit RDP, Windows, Server, 2003, Exploit RDP Windows Server 2003, Esteemaudit, Esteemaudit sem metasploit, without metasploit
