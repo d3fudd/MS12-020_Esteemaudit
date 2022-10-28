@@ -1,6 +1,6 @@
 # Esteemaudit (without Metasploit) - A Windows 2003 RDP Zero Day Exploit
 
-Explorando Remote Desktop do Windows Server 2003 com o exploit Esteemaudit (sem Metasploit) e obtendo RCE (Remote Code Execution).
+Explorando Remote Desktop do Windows Server 2003 com o exploit Esteemaudit (sem Metasploit) e obtendo RCE.
 
 **REPOSITÓRIO CRIADO PARA FINS DIDÁTICOS!**
 
