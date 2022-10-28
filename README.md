@@ -1,4 +1,4 @@
-# Esteemaudit without Metasploit - A Windows 2003 RDP Zero Day Exploit
+# Esteemaudit (without Metasploit) - A Windows 2003 RDP Zero Day Exploit
 
 Explorando Remote Desktop do Windows Server 2003 com o exploit Esteemaudit (sem Metasploit) e obtendo RCE (Remote Code Execution).
 
@@ -54,7 +54,7 @@ Z:\>exit
 
 Baixe o exploit e copie os arquivos:
 ```
-git clone https://github.com/caique-garbim/Esteemaudit-without-Metasploit
+git clone https://github.com/caique-garbim/MS12-020_Esteemaudit
 cd Esteemaudit-without-Metasploit/
 cp -r esteemaudit/ /usr/share/
 cd /usr/share/esteemaudit
