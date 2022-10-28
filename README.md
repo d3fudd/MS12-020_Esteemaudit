@@ -55,7 +55,7 @@ Z:\>exit
 Baixe o exploit e copie os arquivos:
 ```
 git clone https://github.com/caique-garbim/MS12-020_Esteemaudit
-cd Esteemaudit-without-Metasploit/
+cd MS12-020_Esteemaudit/
 cp -r esteemaudit/ /usr/share/
 cd /usr/share/esteemaudit
 ```
